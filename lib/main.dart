@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:greetings_app/constants.dart'; // Step - 1
+import 'package:intl/intl.dart';
 
 void main() => runApp(MyApp()); // Step - 2, step 4
 
 DateTime now = DateTime.now();
+int timeNow = int.parse(DateFormat('kk').format(now));
+int val;
 
 class MyApp extends StatelessWidget {
   //step 3
   @override
   Widget build(BuildContext context) {
+    if (timeNow <= 12) {
+      val = 0;
+    } else if (timeNow > 12 && timeNow <= 16) {
+      val = 1;
+    } else if (timeNow > 6 && timeNow <= 20) {
+      val = 2;
+    } else if (timeNow > 20) {
+      val = 3;
+    }
     return MaterialApp(
       // Step 5
       home: SafeArea(
