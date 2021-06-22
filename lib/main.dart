@@ -4,10 +4,11 @@ import 'package:greetings_app/constants.dart'; // Step - 1
 
 void main() => runApp(MyApp()); // Step - 2, step 4
 
+DateTime now = DateTime.now();
+
 class MyApp extends StatelessWidget {
   //step 3
   @override
-  DateTime now = DateTime.now();
   Widget build(BuildContext context) {
     return MaterialApp(
       // Step 5
