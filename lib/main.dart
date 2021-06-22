@@ -7,6 +7,7 @@ void main() => runApp(MyApp()); // Step - 2, step 4
 class MyApp extends StatelessWidget {
   //step 3
   @override
+  DateTime now = DateTime.now();
   Widget build(BuildContext context) {
     return MaterialApp(
       // Step 5
@@ -52,10 +53,10 @@ class MyApp extends StatelessWidget {
                   'Some quote here',
                   style: GoogleFonts.poppins(textStyle: kParagraph),
                   textAlign: TextAlign.center,
-                ),
+                ), // Step 18
                 Spacer(
                   flex: 2,
-                )
+                ) //Step 19
               ],
             ),
           ),
